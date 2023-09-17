@@ -1,0 +1,81 @@
+@import '../../styles/marketplace.css';
+
+:root {
+}
+
+.root {
+  color: var(--matterColorDark);
+  padding-top: 30px;
+}
+
+.title {
+  @apply --marketplaceH1FontStyles;
+  color: var(--marketplaceColor);
+  margin-top: 0;
+  text-align: center;
+  padding-top: 70px;
+}
+
+.steps {
+  display: flex;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 695px) {
+    flex-direction: row;
+  }
+  @media screen and (max-width: 695px) {
+    flex-direction: column;
+  }
+}
+
+.stepTitle {
+  color: var(--marketplaceColor);
+}
+
+.stepLeft,
+.stepRight {
+  margin: 0 1em 0 1em;
+}
+.stepLeft {
+  flex: 1;
+  order: 1;
+}
+
+.imgWrapper {
+  padding-top: 15px;
+}
+
+.imgs {
+  max-width: 400px;
+  @media (max-width: 880px) {
+    max-width: 380px;
+  }
+  @media (max-width: 840px) {
+    max-width: 340px;
+  }
+  @media (max-width: 695px) {
+    max-width: 400px;
+  }
+  @media (max-width: 514px) {
+    max-width: 360px;
+  }
+  @media (max-width: 450px) {
+    max-width: 330px;
+  }
+  @media (max-width: 375px) {
+    max-width: 260px;
+  }
+}
+
+.stepRight {
+  flex: 1;
+  text-align: center;
+  order: 2;
+}
+
+.startButton {
+  @apply --marketplaceButtonStyles;
+}

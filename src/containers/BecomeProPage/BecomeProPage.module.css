@@ -1,0 +1,162 @@
+@import '../../styles/marketplace.css';
+
+:root {
+  /*
+    These variables are available in global scope through ":root"
+    element (<html> tag). Variables with the same names are going to
+    overwrite each other if CSS Properties' (PostCSS plugin)
+    configuration "preserve: true" is used - meaning that variables
+    are left to CSS bundle. We are planning to enable it in the future
+    since browsers support CSS Properties already.
+ */
+
+  --HowWorksPage_sectionMarginTop: 0px;
+  --HowWorksPage_sectionMarginTopMedium: 60px;
+  --HowWorksPage_sectionMarginTopLarge: 94px;
+}
+
+.root {
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+  @media (--viewportMedium) {
+  }
+
+  @media (--viewportLarge) {
+  }
+}
+
+.title {
+  @apply --marketplaceH1FontStyles;
+  color: var(--matterColorDark);
+  margin-top: 0;
+  text-align: center;
+  /* padding-bottom: 15px; */
+}
+
+.subTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.titleMobile {
+  @apply --marketplaceH1FontStyles;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: var(--matterColorDark);
+
+  @media (min-width: 924px) {
+    display: none;
+  }
+}
+
+.containerMobile {
+  margin: 0 24px 0 24px;
+  justify-content: center;
+  align-items: center;
+
+  @media (--viewportMedium) {
+    margin: 0 7.5vw 0 7.5vw;
+  }
+}
+
+.header {
+  flex-grow: 1;
+  justify-content: flex-end;
+  padding-bottom: 32px;
+
+  @media (--viewportMedium) {
+    padding-bottom: 33px;
+  }
+
+  @media (--viewportLarge) {
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  @media screen and (max-width: 695px) {
+    padding-bottom: 0;
+  }
+}
+
+.sections {
+  margin: 0;
+  padding-top: 1px;
+}
+
+.section {
+  overflow: auto;
+}
+
+.sectionContent {
+  margin: var(--HowWorksPage_sectionMarginTop) 24px 51px 24px;
+
+  @media (--viewportMedium) {
+    max-width: 100%;
+    margin: var(--HowWorksPage_sectionMarginTopMedium) 24px 60px 24px;
+  }
+
+  @media (--viewportLarge) {
+    max-width: 1128px;
+    padding: 0 36px 0 36px;
+    margin: var(--HowWorksPage_sectionMarginTopLarge) auto 93px auto;
+  }
+
+  @media (--viewportXLarge) {
+    max-width: 1056px;
+    padding: 0;
+  }
+}
+
+.sectionContentFirstChild {
+  composes: sectionContent;
+  margin-top: 3vh;
+
+  @media screen and (max-width: 695px) {
+    margin-top: 0;
+  }
+}
+
+/* Every other section has a light background */
+.section:nth-of-type(1n) {
+  background-color: var(--matterColorLight);
+  @media (--viewportMedium) {
+    border-radius: 4px;
+  }
+}
+
+.section:nth-of-type(2n) {
+  background-color: var(--matterColorBright);
+  @media (--viewportMedium) {
+    border-radius: 4px;
+  }
+}
+
+.staticPageWrapper {
+  margin: 20px auto 0 auto;
+
+  @media (--viewportMedium) {
+    margin: 30px auto 0 auto;
+  }
+}
+
+.contentWrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (--viewportMedium) {
+    flex-wrap: nowrap;
+  }
+}
+
+.contentMain {
+  width: 90%;
+
+  @media (--viewportMedium) {
+    max-width: 650px;
+  }
+}

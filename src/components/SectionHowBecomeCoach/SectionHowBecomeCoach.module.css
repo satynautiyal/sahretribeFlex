@@ -1,0 +1,145 @@
+@import '../../styles/marketplace.css';
+
+:root {
+}
+
+.root {
+  color: var(--matterColorDark);
+}
+
+.title {
+  @apply --marketplaceH1FontStyles;
+  margin-top: 0;
+  text-align: center;
+  padding-bottom: 15px;
+
+  @media screen and (max-width: 425px) {
+    margin: 0;
+  }
+}
+
+.titleBlue {
+  color: var(--marketplaceColor);
+}
+
+.iconWrapper {
+  text-align: center;
+  margin-top: 10px;
+  /*  */
+}
+
+.buttonWrapper {
+  text-align: center;
+  margin: 0 10% 0 10%;
+}
+
+.startButton {
+  @apply --marketplaceButtonStyles;
+
+  margin-top: 15px;
+  margin-bottom: 24px;
+
+  @media (--viewportMedium) {
+    display: inline-block;
+    width: 260px;
+    margin-top: 40px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 75px;
+
+  @media (--viewportLarge) {
+    flex-direction: row;
+  }
+}
+
+.steps {
+  width: 100%;
+
+  @media (--viewportLarge) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+  }
+}
+
+.step {
+  display: flex;
+  text-align: left;
+  @media (--viewportMedium) {
+    /* width: 324px; */
+    margin-right: 40px;
+  }
+}
+
+/* .step:last-of-type {
+  @media (--viewportMedium) {
+    margin-right: 0;
+  }
+} */
+
+.textWrapper {
+  margin-left: 10px;
+}
+
+.textWrapperAligned {
+  margin-left: 6px;
+}
+
+.stepTitle {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 0px;
+  /* color: var(--marketplaceColor); */
+
+  @media screen and (max-width: 425px) {
+    line-height: 24px;
+  }
+}
+
+.stepSubtitle {
+  margin-top: 0;
+  font-size: 18px;
+
+  @media screen and (max-width: 425px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.createListingLink {
+  margin-top: 36px;
+
+  @media (--viewportMedium) {
+    margin-top: 20px;
+  }
+}
+
+.imageContainer {
+  /* display: none; */
+
+  @media (--viewportLarge) {
+    display: flex;
+    width: 50%;
+    align-items: center;
+  }
+}
+
+.img {
+  width: 100%;
+  margin-bottom: 50px;
+
+  @media (--viewportLarge) {
+    margin-bottom: 0;
+  }
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}

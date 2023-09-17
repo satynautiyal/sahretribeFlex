@@ -1,0 +1,5 @@
+@import '../../styles/marketplace.css';
+
+.heading {
+  color: var(--matterColorDark);
+}

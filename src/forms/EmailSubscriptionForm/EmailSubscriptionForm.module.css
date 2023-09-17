@@ -1,0 +1,34 @@
+@import '../../styles/marketplace.css';
+
+.root {
+  @apply --marketplaceModalFormRootStyles;
+  color: var(--matterColorDark);
+
+  justify-content: flex-start;
+
+  @media (--viewportMedium) {
+    justify-content: space-between;
+  }
+}
+
+.password {
+  @apply --marketplaceModalPasswordMargins;
+}
+
+.bottomWrapper {
+  @apply --marketplaceModalBottomWrapper;
+}
+
+/* Adjust the bottomWrapper's margin to match modals without the helper text */
+.bottomWrapperText {
+  @apply --marketplaceModalBottomWrapperText;
+}
+
+.recoveryLink {
+  @apply --marketplaceModalHelperLink;
+  color: var(--marketplaceColor);
+}
+
+.recoveryLinkInfo {
+  @apply --marketplaceModalHelperText;
+}

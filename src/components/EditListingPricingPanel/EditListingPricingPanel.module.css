@@ -1,0 +1,28 @@
+@import '../../styles/marketplace.css';
+
+.root {
+  flex-grow: 1;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 11px 24px 50px 24px;
+}
+
+.form {
+  flex-grow: 1;
+}
+
+.title {
+  margin-bottom: 19px;
+  color: var(--marketplaceColor);
+
+  @media (--viewportMedium) {
+    margin-bottom: 38px;
+    padding: 1px 0 7px 0;
+  }
+}
+
+.priceCurrencyInvalid {
+  color: var(--failColor);
+}

@@ -1,0 +1,12 @@
+@import '../../styles/marketplace.css';
+
+.root {
+}
+
+.marketplaceStroke {
+  stroke: var(--marketplaceColor);
+}
+
+.attentionStroke {
+  stroke: var(--attentionColor);
+}

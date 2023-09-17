@@ -1,0 +1,6 @@
+@import '../../styles/marketplace.css';
+
+.root {
+  fill: var(--matterColorLight);
+  transition: var(--transitionStyleButton);
+}

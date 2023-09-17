@@ -1,0 +1,163 @@
+@import '../../styles/marketplace.css';
+
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.bookingDates {
+  flex-shrink: 0;
+  margin-bottom: 38px;
+
+  /* Ensure that calendar dropdown gets some stacking context relative to other form items below */
+  z-index: 1;
+}
+
+.priceBreakdownContainer {
+  padding: 0 24px;
+  margin-bottom: 40px;
+
+  @media (--viewportMedium) {
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 1px;
+  }
+}
+
+.priceBreakdownTitle {
+  /* Font */
+  color: var(--matterColorAnti);
+
+  margin-top: 5px;
+  margin-bottom: 14px;
+  @media (--viewportMedium) {
+    margin-top: 5px;
+    margin-bottom: 26px;
+  }
+}
+
+.receipt {
+  flex-shrink: 0;
+  margin: 0 0 24px 0;
+}
+
+.error {
+  color: var(--failColor);
+  margin: 0 24px;
+  display: inline-block;
+}
+
+.spinner {
+  margin: auto;
+}
+
+.sideBarError {
+  @apply --marketplaceH4FontStyles;
+  color: var(--failColor);
+  margin: 0 24px 12px 24px;
+
+  @media (--viewportMedium) {
+    margin: 0 0 12px 0;
+  }
+}
+
+.smallPrint {
+  @apply --marketplaceTinyFontStyles;
+  color: var(--matterColorAnti);
+  text-align: center;
+  margin: auto 24px 20px 24px;
+  flex-shrink: 0;
+
+  @media (--viewportMedium) {
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
+
+  @media (--viewportLarge) {
+    margin-top: 4px;
+    margin-bottom: 21px;
+  }
+}
+
+.infoPrint {
+  @apply --marketplaceTinyFontStyles;
+  text-align: center;
+  margin: auto 24px 20px 24px;
+  flex-shrink: 0;
+}
+
+.errorPrint {
+  /* @apply --marketplaceTinyFontStyles; */
+  /* color: var(--matterColorAnti); */
+  color: red;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.submitButtonWrapper {
+  flex-shrink: 0;
+  padding: 0 24px 24px 24px;
+  width: 100%;
+  /* background-color: #0532ff; */
+
+  @media (--viewportMedium) {
+    padding: 0;
+    width: 100%;
+  }
+}
+.requestSession {
+  background-color: #0532ff;
+  &:hover {
+    background-color: rgb(0, 89, 255);
+  }
+  &:focus {
+    background-color: rgb(0, 89, 255);
+  }
+  &:disabled {
+    background-color: rgb(0, 89, 255) !important;
+  }
+}
+.location {
+  width: 100%;
+  margin-top: 24px;
+
+  @media (--viewportMedium) {
+    width: 100% !important;
+  }
+
+  @media (--viewportLarge) {
+    width: 100% !important;
+  }
+
+  @media (--viewportSmall) {
+    width: calc(100% - 45px);
+    margin: 0 auto;
+  }
+  @media (--viewportSmallMax) {
+    width: calc(100% - 45px);
+    margin: 0 auto;
+  }
+}
+.location_address {
+  @media (--viewportSmall) {
+    margin-top: 24px !important;
+
+    width: calc(100% - 45px);
+    margin: 0 auto;
+  }
+
+  @media (--viewportMedium) {
+    width: 100% !important;
+  }
+
+  @media (--viewportLarge) {
+    width: 100% !important;
+  }
+
+  @media (--viewportSmallMax) {
+    margin-top: 24px !important;
+
+    width: calc(100% - 45px);
+    margin: 0 auto;
+  }
+}

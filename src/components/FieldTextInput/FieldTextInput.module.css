@@ -1,0 +1,20 @@
+@import '../../styles/marketplace.css';
+
+.root {
+}
+
+.input {
+  border-bottom-color: var(--attentionColor);
+  color: var(--matterColor);
+}
+
+.inputSuccess {
+  border-bottom-color: var(--successColor);
+}
+
+.inputError {
+  border-bottom-color: var(--failColor);
+}
+
+.textarea {
+}

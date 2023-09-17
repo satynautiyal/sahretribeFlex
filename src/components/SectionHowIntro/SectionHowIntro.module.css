@@ -1,0 +1,96 @@
+@import '../../styles/marketplace.css';
+
+:root {
+}
+
+.root {
+  color: var(--matterColorDark);
+  display: flex;
+
+  @media (min-width: 695px) {
+    height: 90vh;
+  }
+}
+
+.imgs {
+  width: 100%;
+}
+
+.introContainer {
+  margin: 0 24px 0 24px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  @media (--viewportMedium) {
+    margin: 0 7.5vw 0 7.5vw;
+  }
+  @media (max-width: 695px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.title {
+  @apply --marketplaceH1FontStyles;
+  margin-bottom: 10px;
+
+  @media (min-width: --viewportLarge) {
+    margin-top: 0;
+  }
+}
+
+.subtitle {
+  margin-right: 27px;
+  width: 70%;
+
+  @media (max-width: 1280px) {
+    margin-right: 20px;
+    width: 80%;
+  }
+
+  @media (max-width: 810px) {
+    margin-right: 20px;
+    width: 80%;
+  }
+}
+
+.containerLeft {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-self: baseline;
+  align-items: center;
+}
+
+.containerRight {
+  flex: 1;
+}
+
+.buttonWrapper {
+  margin-top: 50px;
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+
+.startButton {
+  @apply --marketplaceButtonStyles;
+  color: var(--matterColorLight);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.buttonStyles {
+  @apply --marketplaceButtonStylesSecondary;
+  margin-top: 10px;
+  background-color: transparent;
+  color: var(--marketplaceColor);
+  border: 1px solid var(--marketplaceColor);
+}
+
+.buttonStyles:hover {
+  background-color: var(--attentionColorLight);
+  border: 1px solid var(--marketplaceColor);
+}

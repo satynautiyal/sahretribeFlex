@@ -1,0 +1,70 @@
+@import '../../styles/marketplace.css';
+
+.root {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--matterColorBright);
+  color: var(--matterColorDark);
+}
+
+.filtersWrapper {
+}
+
+.footer {
+  display: flex;
+}
+
+.resetAllButton {
+  @apply --marketplaceLinkStyles;
+  @apply --marketplaceH5FontStyles;
+  font-weight: var(--fontWeightMedium);
+  color: var(--matterColorAnti);
+
+  /* Layout */
+  margin: 0 auto 0 0;
+
+  /* Override button styles */
+  outline: none;
+
+  &:focus,
+  &:hover {
+    color: var(--marketplaceColor);
+  }
+}
+
+.cancelButton {
+  @apply --marketplaceLinkStyles;
+  @apply --marketplaceH5FontStyles;
+  font-weight: var(--fontWeightMedium);
+  color: var(--matterColorAnti);
+
+  /* Layout */
+  margin: 0 24px 0 24px;
+
+  /* Override button styles */
+  outline: none;
+
+  &:focus,
+  &:hover {
+    color: var(--marketplaceColor);
+  }
+}
+
+.applyButton {
+  @apply --marketplaceLinkStyles;
+  @apply --marketplaceH5FontStyles;
+  font-weight: var(--fontWeightMedium);
+
+  /* Layout */
+  margin: 0;
+
+  /* Override button styles */
+  outline: none;
+
+  &:focus,
+  &:hover {
+    color: var(--marketplaceColorDark);
+  }
+}

@@ -1,0 +1,78 @@
+@import '../../styles/marketplace.css';
+
+:root {
+}
+
+.root {
+  color: var(--matterColorDark);
+}
+
+.title {
+  @apply --marketplaceH1FontStyles;
+  margin-top: 0;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.iconWrapper {
+  text-align: center;
+}
+
+.buttonWrapper {
+  text-align: center;
+  margin: 0 10% 0 10%;
+}
+
+.startButton {
+  @apply --marketplaceButtonStyles;
+
+  margin-top: 15px;
+  margin-bottom: 24px;
+
+  @media (--viewportMedium) {
+    display: inline-block;
+    width: 260px;
+    margin-top: 40px;
+  }
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  @media (--viewportMedium) {
+    flex-direction: row;
+  }
+}
+
+.step {
+  @media (--viewportMedium) {
+    width: 324px;
+    margin-right: 40px;
+  }
+}
+
+.step:last-of-type {
+  @media (--viewportMedium) {
+    margin-right: 0;
+  }
+}
+
+.stepTitle {
+  margin-top: 18px;
+  margin-bottom: 18px;
+
+  @media (--viewportMedium) {
+    margin-top: 21px;
+    margin-bottom: 18px;
+  }
+}
+
+.createListingLink {
+  margin-top: 36px;
+
+  @media (--viewportMedium) {
+    margin-top: 20px;
+  }
+}

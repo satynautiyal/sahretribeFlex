@@ -1,0 +1,9 @@
+@import '../../styles/marketplace.css';
+
+.root {
+  fill: var(--matterColorNegative);
+}
+
+.filled {
+  fill: var(--marketplaceColor);
+}

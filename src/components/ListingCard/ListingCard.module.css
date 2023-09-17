@@ -1,0 +1,195 @@
+@import '../../styles/marketplace.css';
+
+.root {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+
+  /* Remove link's hover effect */
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.threeToTwoWrapper {
+  /* Layout */
+  display: block;
+  width: 100%;
+  position: relative;
+  transition: var(--transitionStyleButton);
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: var(--boxShadowListingCard);
+  }
+}
+
+/* Firefox doesn't support image aspect ratio inside flexbox */
+.aspectWrapper {
+  padding-bottom: 66.6667%; /* 3:2 Aspect Ratio */
+  background: var(--matterColorNegative); /* Loading BG color */
+}
+
+.rootForImage {
+  /* Layout - image will take space defined by aspect ratio wrapper */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-radius: var(--borderRadius);
+}
+
+.info {
+  /* Layout */
+  display: flex;
+  flex-direction: row;
+  padding: 5px 2px 2px 2px;
+
+  @media (--viewportMedium) {
+    padding: 16px 0 2px 0;
+  }
+}
+
+.price {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  margin-right: 8px;
+
+  @media (--viewportMedium) {
+    margin-right: 18px;
+  }
+}
+
+.priceValue {
+  /* Remove default margins from font */
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: 14px;
+  line-height: 16px;
+
+  @media (--viewportMedium) {
+    /* Font */
+    /* @apply --marketplaceH3FontStyles; */
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.perUnit {
+  /* Font */
+  @apply --marketplaceTinyFontStyles;
+  color: var(--marketplaceColor);
+
+  /* Remove default margins from font */
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (--viewportMedium) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: var(--matterColorDark);
+  font-size: 14px;
+  line-height: 16px;
+
+  /* Remove default margins from font */
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (--viewportMedium) {
+    /* Font */
+    /* @apply --marketplaceH3FontStyles; */
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.certificateInfo {
+  /* Font */
+  @apply --marketplaceTinyFontStyles;
+  color: var(--matterColorDark);
+
+  /* Remove default margins from font */
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (--viewportMedium) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.longWord {
+  /* fallback option */
+  word-break: break-all;
+  /* use break-word if available */
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.listingDistances {
+  font-size: 10px;
+  line-height: 12px;
+  position: absolute;
+  bottom: 25px;
+  right: 15px;
+  padding: 2px 4px;
+  text-align: left;
+  color: #fff;
+  background-color: #212429;
+  bottom: 5px;
+
+  @media (--viewportMedium) {
+    position: absolute;
+    bottom: 25px;
+    right: 15px;
+    padding: 5px 15px;
+    font-size: 14px;
+    text-align: left;
+    color: #fff;
+    background-color: #212429;
+    bottom: 5px;
+  }
+}
+
+.reviewStars {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  /* margin-top: 4px; */
+
+  @media (--viewportMedium) {
+    /* margin: 5px 0; */
+  }
+}
+
+.reviewStar {
+  width: 12px;
+  height: 12px;
+  margin-left: 2px;
+  font-styles: initial;
+}
+
+.rating {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: flex-end;
+  font-size: 16px;
+}

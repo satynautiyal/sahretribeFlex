@@ -1,0 +1,31 @@
+@import '../../styles/marketplace.css';
+
+.title {
+  /* Font */
+  @apply --marketplaceH3FontStyles;
+  color: var(--matterColorAnti);
+
+  margin-top: 0;
+  margin-bottom: 13px;
+  @media (--viewportMedium) {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.section {
+  margin: 40px 0;
+}
+
+.sectionCustomFields {
+  padding: 0 24px;
+  margin-bottom: 15px;
+
+  @media (--viewportMedium) {
+    padding: 0 0 0 0;
+  }
+}
+
+.customFieldValue {
+  max-width: 95vw;
+}

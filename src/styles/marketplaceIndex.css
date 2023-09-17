@@ -1,0 +1,370 @@
+@import '../assets/sanitize.css';
+@import '../styles/marketplace.css';
+
+/* ================ Fonts ================ */
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased; /* http://szafranek.net/blog/2009/02/22/font-smoothing-explained/ */
+  -moz-osx-font-smoothing: grayscale; /* http://szafranek.net/blog/2009/02/22/font-smoothing-explained/ */
+  text-rendering: optimizeSpeed;
+
+  background-color: var(--matterColorBright);
+}
+
+/* ::selection {
+  background: var(--marketplaceColor); /* WebKit/Blink Browsers */
+/* color: var(--matterColorLight);
+}  */
+
+/* ::-moz-selection {
+  background: var(--marketplaceColor); /* Gecko Browsers */
+/* color: var(--matterColorLight);
+} */
+
+a {
+  /* Position and dimensions */
+  display: inline;
+  margin: 0;
+  padding: 0;
+
+  /* Borders */
+  border: none;
+
+  /* Colors */
+  color: var(--marketplaceColor);
+
+  /* Text size should be inherited */
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+h1 {
+  font-weight: var(--fontWeightBold);
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: -1px;
+  /* margin-top + n * line-height + margin-bottom => x * 6px */
+  margin-top: 18px;
+  margin-bottom: 18px;
+
+  @media (--viewportMedium) {
+    font-size: 48px;
+    font-weight: var(--fontWeightSemiBold);
+    line-height: 56px;
+    letter-spacing: -2px;
+    /* margin-top + n * line-height + margin-bottom => x * 8px */
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+}
+h2 {
+  font-weight: var(--fontWeightSemiBold);
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.3px;
+  /* margin-top + n * line-height + margin-bottom => x * 6px */
+  margin-top: 21px;
+  margin-bottom: 17px;
+
+  @media (--viewportMedium) {
+    line-height: 32px;
+    /* margin-top + n * line-height + margin-bottom => x * 8px */
+    margin-top: 21px;
+    margin-bottom: 19px;
+  }
+}
+h3 {
+  font-weight: var(--fontWeightSemiBold);
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  /* margin-top + n * line-height + margin-bottom => x * 6px */
+  margin-top: 16px;
+  margin-bottom: 14px;
+
+  @media (--viewportMedium) {
+    /* margin-top + n * line-height + margin-bottom => x * 8px */
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}
+h4 {
+  font-weight: var(--fontWeightMedium);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  /* margin-top + n * line-height + margin-bottom => x * 6px */
+  margin-top: 12px;
+  margin-bottom: 12px;
+
+  @media (--viewportMedium) {
+    font-weight: var(--fontWeightMedium);
+    /* margin-top + n * line-height + margin-bottom => x * 8px */
+    margin-top: 17px;
+    margin-bottom: 15px;
+  }
+}
+h5 {
+  font-weight: var(--fontWeightRegular);
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0;
+  /* margin-top + n * line-height + margin-bottom => x * 6px */
+  margin-top: 10px;
+  margin-bottom: 8px;
+
+  @media (--viewportMedium) {
+    line-height: 24px;
+    /* margin-top + n * line-height + margin-bottom => x * 8px */
+    margin-top: 10px;
+    margin-bottom: 14px;
+  }
+}
+h6 {
+  font-weight: var(--fontWeightBold);
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  /* margin-top + n * line-height + margin-bottom => x * 6px */
+  margin-top: 10px;
+  margin-bottom: 8px;
+
+  @media (--viewportMedium) {
+    line-height: 16px;
+    /* margin-top + n * line-height + margin-bottom => x * 8px */
+    margin-top: 10px;
+    margin-bottom: 6px;
+  }
+}
+
+input,
+textarea,
+select,
+li {
+  font-family: 'sofiapro', Helvetica, Arial, sans-serif;
+  font-weight: var(--fontWeightMedium);
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  /* No margins for default font */
+
+  @media (--viewportMedium) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+p,
+pre {
+  font-family: 'sofiapro', Helvetica, Arial, sans-serif;
+  font-weight: var(--fontWeightMedium);
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  /* margin-top + n * line-height + margin-bottom => x * 6px */
+  margin-top: 12px;
+  margin-bottom: 12px;
+
+  @media (--viewportMedium) {
+    font-size: 20px;
+    line-height: 32px;
+    /* margin-top + n * line-height + margin-bottom => x * 8px */
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+/* ================ Normalisations ================ */
+
+html {
+  font-family: 'sofiapro', Helvetica, Arial, sans-serif;
+  font-weight: var(--fontWeightMedium);
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  /* No margins for default font */
+
+  @media (--viewportMedium) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  color: var(--matterColor);
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+legend,
+label {
+  font-weight: var(--fontWeightMedium);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  /* margin-top + n * line-height + margin-bottom => x * 6px */
+  margin-top: 12px;
+  margin-bottom: 12px;
+
+  @media (--viewportMedium) {
+    font-weight: var(--fontWeightMedium);
+    /* margin-top + n * line-height + margin-bottom => x * 8px */
+    margin-top: 17px;
+    margin-bottom: 15px;
+  }
+
+  font-weight: var(--fontWeightSemiBold);
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (--viewportMedium) {
+    font-weight: var(--fontWeightSemiBold);
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 6px;
+    padding-bottom: 2px;
+  }
+}
+
+button {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+select {
+  /* Dimensions */
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 5px 0 5px 0;
+
+  /* Unset user agent styles */
+  appearance: none;
+
+  /* Borders */
+  border: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--marketplaceColor);
+  border-radius: 0;
+
+  /* Background */
+  background-image: url('data:image/svg+xml;utf8,<svg width="14" height="9" viewBox="0 0 14 9" xmlns="http://www.w3.org/2000/svg"><path d="M6.53 7.472c.26.26.68.26.94 0l5.335-5.333c.26-.263.26-.684 0-.944-.26-.26-.683-.26-.943 0L7 6.056l-4.862-4.86c-.26-.26-.683-.26-.943 0-.26.26-.26.68 0 .943L6.53 7.47z" stroke="%234A4A4A" fill="%234A4A4A" fill-rule="evenodd"/></svg>');
+  background-size: 16px 16px;
+  background-position: center right;
+
+  &:disabled {
+    background-image: url('data:image/svg+xml;utf8,<svg width="14" height="9" viewBox="0 0 14 9" xmlns="http://www.w3.org/2000/svg"><path d="M6.53 7.472c.26.26.68.26.94 0l5.335-5.333c.26-.263.26-.684 0-.944-.26-.26-.683-.26-.943 0L7 6.056l-4.862-4.86c-.26-.26-.683-.26-.943 0-.26.26-.26.68 0 .943L6.53 7.47z" stroke="%23E7E7E7" fill="%23E7E7E7" fill-rule="evenodd"/></svg>');
+  }
+
+  /* Effects */
+
+  cursor: pointer;
+  transition: border-bottom-color var(--transitionStyle);
+
+  &:hover,
+  &:focus {
+    border-bottom-color: var(--matterColor);
+    outline: none;
+  }
+
+  @media (--viewportMedium) {
+    padding: 4px 0 10px 0;
+  }
+}
+
+input {
+  /* Dimensions */
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 5px 0 5px 0;
+
+  /* Borders */
+  border: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--marketplaceColor);
+  border-radius: 0;
+
+  &::placeholder {
+    color: var(--matterColorAnti);
+  }
+
+  /* Effects */
+
+  transition: border-bottom-color var(--transitionStyle);
+
+  &:hover,
+  &:focus {
+    border-bottom-color: var(--attentionColor);
+    outline: none;
+  }
+
+  @media (--viewportMedium) {
+    padding: 4px 0 10px 0;
+  }
+}
+
+textarea {
+  /* Dimensions */
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 5px 0 5px 0;
+
+  /* Borders */
+  border: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--marketplaceColor);
+  border-radius: 0;
+
+  &::placeholder {
+    color: var(--matterColorAnti);
+  }
+
+  /* Effects */
+
+  transition: border-bottom-color var(--transitionStyle);
+
+  &:hover,
+  &:focus {
+    border-bottom-color: var(--attentionColor);
+    outline: none;
+  }
+
+  @media (--viewportMedium) {
+    padding: 4px 0 10px 0;
+  }
+
+  /* Todo: All textareas are using auto-sizing extension which currently calculates required space incorrectly when box-sixing is "border-box" */
+  box-sizing: content-box;
+  padding: 0 0 10px 0;
+
+  &::placeholder {
+    padding: 0 0 10px 0;
+  }
+
+  @media (--viewportMedium) {
+    padding: 4px 0 10px 0;
+  }
+}
+
+:global(.fontsLoaded) {
+  & body {
+    font-family: 'sofiapro', Helvetica, Arial, sans-serif;
+  }
+  & button {
+    font-family: 'sofiapro', Helvetica, Arial, sans-serif;
+  }
+}

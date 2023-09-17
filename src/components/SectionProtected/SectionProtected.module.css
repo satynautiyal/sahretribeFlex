@@ -1,0 +1,26 @@
+@import '../../styles/marketplace.css';
+
+#section {
+  color: var(--matterColorDark);
+  text-align: center;
+}
+
+.title {
+  @apply --marketplaceH1FontStyles;
+  margin-top: 10px;
+  color: var(--marketplaceColor);
+  font-weight: 700;
+}
+
+.sectionInfo {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.logo {
+  width: 6%;
+  @media (max-width: 767px) {
+    width: 10%;
+    min-width: 50px;
+  }
+}

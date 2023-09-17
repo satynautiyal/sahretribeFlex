@@ -1,0 +1,19 @@
+@import '../../styles/marketplace.css';
+
+.heading {
+  margin: 5px 0 18px 0;
+  color: var(--marketplaceColor);
+  text-align: center;
+
+  @media (--viewportMedium) {
+    margin: 8px 0 24px 0;
+  }
+}
+
+.content {
+  color: var(--matterColorAnti);
+
+  @media (--viewportLarge) {
+    max-width: 735px;
+  }
+}

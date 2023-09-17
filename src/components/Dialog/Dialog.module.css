@@ -1,0 +1,33 @@
+@import '../../styles/marketplace.css';
+
+.main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  background: #0000004f;
+}
+
+.popup {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+
+.popUpBack {
+  background-color: #0532ff;
+  margin: 0 auto;
+  z-index: 999;
+  width: fit-content;
+  padding: 5px 15px;
+  font-size: 12px;
+  min-height: fit-content !important;
+}

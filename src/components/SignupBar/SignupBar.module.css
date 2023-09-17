@@ -1,0 +1,66 @@
+@import '../../styles/marketplace.css';
+
+#section {
+  color: var(--matterColorAnti);
+}
+
+.title {
+  @apply --marketplaceH1FontStyles;
+  margin-top: 0;
+}
+
+.link {
+  border-bottom: solid var(--matterColorDark);
+  font-size: 30px;
+  color: var(--matterColorDark);
+
+  &:hover {
+    border-top: solid var(--matterColorDark);
+    text-decoration: none;
+  }
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+
+  @media (--viewportMedium) {
+    flex-direction: row;
+    padding: 0.5em 0 1em 0;
+  }
+}
+
+.step {
+  padding-bottom: 0.5em;
+  @media (--viewportMedium) {
+    width: 324px;
+    margin-right: 40px;
+  }
+}
+
+.step:last-of-type {
+  @media (--viewportMedium) {
+    margin-right: 0;
+  }
+}
+
+.stepTitle {
+  margin-top: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding-top: 20px;
+
+  @media (--viewportMedium) {
+    margin-top: 21px;
+    margin-bottom: 10px;
+    padding-top: 35px;
+  }
+}
+
+.createListingLink {
+  margin-top: 36px;
+
+  @media (--viewportMedium) {
+    margin-top: 52px;
+  }
+}

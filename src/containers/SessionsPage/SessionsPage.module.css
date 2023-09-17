@@ -1,0 +1,91 @@
+@import '../../styles/marketplace.css';
+
+.content {
+  @media (--viewportMedium) {
+    margin: 32px auto 0 auto;
+  }
+
+  @media (--viewportLarge) {
+    margin: 0;
+  }
+}
+
+.desktopTopbar,
+.mobileTopbar {
+  box-shadow: none;
+}
+
+.title {
+  margin-top: 8px;
+  margin-bottom: 19px;
+  color: var(--marketplaceColor);
+
+  @media (--viewportMedium) {
+    margin-bottom: 48px;
+  }
+}
+
+.listItem {
+  margin-bottom: 15px;
+}
+
+.searchButton {
+  @apply --marketplaceButtonStyles;
+  width: fit-content;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 30px;
+}
+
+/* .listItem {
+  margin: 30px 0;
+} */
+
+.editLinkDesktop {
+  /* @apply --marketplaceLinkStyles; */
+  margin: 10px 0;
+  cursor: pointer;
+  color: black;
+}
+
+.editLinkDesktop:hover {
+  text-decoration: none;
+}
+
+.active {
+  color: var(--marketplaceColorLight);
+  text-decoration: underline;
+}
+
+.category {
+  @media (--viewportLarge) {
+    margin-bottom: 40px;
+  }
+}
+
+.subheader {
+  font-size: 28px;
+}
+
+.bookDemoContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookDemoHeader {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: normal;
+  margin: 0;
+}
+
+.bookDemoContent {
+}
+
+.bookDemoLink {
+  @apply --marketplaceButtonStyles;
+  width: 200px;
+}

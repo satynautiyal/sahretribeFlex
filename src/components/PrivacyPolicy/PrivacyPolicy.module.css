@@ -1,0 +1,37 @@
+@import '../../styles/marketplace.css';
+
+.styleList {
+  font-size: 16px;
+  padding: 0 20px 0 30px;
+  & .innerList {
+    padding-left: 30px;
+  }
+}
+
+.root {
+  & p,
+  & li {
+    @apply --marketplaceH4FontStyles;
+    color: var(--matterColorDark);
+  }
+  & h2 {
+    /* Adjust heading margins to work with the reduced body font size */
+    margin: 23px 0 19px 0;
+    color: var(--marketplaceColor);
+
+    @media (--viewportMedium) {
+      margin: 24px 0 24px 0;
+    }
+  }
+
+  & .lastUpdated {
+    @apply --marketplaceBodyFontStyles;
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    @media (--viewportMedium) {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+  }
+}

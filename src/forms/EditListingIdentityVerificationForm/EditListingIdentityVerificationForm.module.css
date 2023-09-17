@@ -1,0 +1,81 @@
+@import '../../styles/marketplace.css';
+
+.root {
+  /* Expand to available space */
+  flex-grow: 1;
+
+  /* Dimensions */
+  width: 100%;
+  height: auto;
+
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+
+  @media (--viewportMedium) {
+    padding-top: 1px;
+  }
+}
+
+.error {
+  color: var(--failColor);
+}
+
+.submitButton {
+  margin-top: auto;
+  margin-bottom: 24px;
+  flex-shrink: 0;
+
+  @media (--viewportLarge) {
+    display: inline-block;
+    width: 280px;
+    margin-top: 100px;
+  }
+}
+
+.UploadIdentityVerificationButton {
+  @apply --marketplaceButtonStylesSecondary;
+  margin-top: 22px;
+  padding: 0px;
+  border-radius: 0;
+  border: 1px solid var(--marketplaceColor);
+}
+
+.identityVerificationImageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.identityVerificationImage {
+  width: 300px;
+}
+
+.imageWrapper {
+  position: relative;
+  margin: 15px 15px 15px 0px;
+}
+
+.identityVerificationImageRemove {
+  position: absolute;
+}
+
+.tip {
+  @apply --marketplaceH5FontStyles;
+  flex-shrink: 0;
+  color: var(--matterColorAnti);
+  margin-top: 24px;
+  margin-bottom: 60px;
+  list-style: disc;
+
+  @media (--viewportLarge) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.tipInner {
+  @apply --marketplaceH5FontStyles;
+  list-style: circle;
+  margin: 0;
+}

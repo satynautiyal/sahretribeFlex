@@ -1,0 +1,96 @@
+@import '../../styles/marketplace.css';
+
+:root {
+}
+.root {
+}
+
+.pageTitle {
+  text-align: center;
+  padding-right: 0.1em;
+  padding-bottom: 0.3em;
+  margin-right: -0.5em;
+  border: 2px solid var(--matterColorDark);
+  @media (max-width: 995px) {
+    margin-right: -0.75em;
+  }
+  @media (max-width: 975px) {
+    margin-right: -0.85em;
+  }
+  @media (max-width: 967px) {
+    margin-right: -0.95em;
+  }
+  @media (max-width: 927px) {
+    margin-right: -1em;
+  }
+  @media (max-width: 913px) {
+    margin-right: -1.1em;
+  }
+  @media (max-width: 767px) {
+    margin-right: 0;
+    padding: 0.5em;
+  }
+}
+
+.staticPageWrapper {
+  width: calc(100% - 48px);
+  max-width: 1056px;
+  margin: 24px auto;
+  color: var(--matterColorDark);
+
+  @media (--viewportMedium) {
+    width: calc(100% - 72px);
+    margin: 72px auto;
+  }
+}
+
+.logoWrapper {
+  width: 120px;
+  float: right;
+}
+
+.logo {
+  max-width: 100%;
+  object-fit: cover;
+  margin: auto;
+  display: flex;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (--viewportMedium) {
+    flex-wrap: nowrap;
+  }
+}
+
+.contentSide {
+  font-style: italic;
+
+  @media (--viewportMedium) {
+    width: 193px;
+    margin-right: 103px;
+    margin-top: 8px;
+  }
+  @media (max-width: 1024px) {
+    margin-right: 90px;
+  }
+  @media (max-width: 995px) {
+    margin-right: 80px;
+  }
+  @media (max-width: 767px) {
+    margin: auto;
+  }
+}
+
+.contentMain {
+  width: 90%;
+
+  @media (--viewportMedium) {
+    max-width: 650px;
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
