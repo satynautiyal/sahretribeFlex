@@ -129,7 +129,7 @@
     "heroku-postbuild": "yarn run build",
     "timezones": "node scripts/parse-iana-timezones.js",
     "translate": "node scripts/translations.js",
-    "build": "yarn build-web&&yarn build-server && mkdir -p ./build/.well-known && cp ./applepay/apple-developer-merchantid-domain-association ./build/.well-known/"
+    "build": "yarn build-web&&yarn build-server && mkdir -p ./build/.well-known && cp ./apple-developer-merchantid-domain-association ./build/.well-known/"
   },
   "browserslist": {
     "production": [
