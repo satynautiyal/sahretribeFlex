@@ -182,6 +182,7 @@ const PaymentMethodSelector = props => {
     { last4Digits }
   );
 
+  console.log("applePay", paymentRequest)
   return (
     <React.Fragment>
       <h3 className={css.info}>
@@ -277,7 +278,7 @@ class StripePaymentForm extends Component {
     this.setState({paymentRequest: paymentRequest});
 
     paymentRequest.canMakePayment().then(result => {
-        this.setState({ applePayEnabled: result });
+        this.setState({ applePayEnabled: result.applePay });
         console.log("rrrrrrrrrrrr",result)
       });
     }
