@@ -10,7 +10,6 @@ import { propTypes } from './util/types';
 import * as log from './util/log';
 import { canonicalRoutePath } from './util/routes';
 import routeConfiguration from './routeConfiguration';
-import AppleDeveloperMerchantidDomainAssociation from './components/AppleDeveloperMerchantidDomainAssociation';
 
 const canShowComponent = props => {
   const { isAuthenticated, route } = props;
@@ -199,33 +198,14 @@ const Routes = (props, context) => {
     );
   };
 
-  const AppleDeveloperMerchantidDomainAssociation = () => {
-    // Create a Blob object from the file contents
-    const blob = new Blob(['File contents...'], { type: 'text/plain' });
-  
-    // Create a link element
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = './apple-developer-merchantid-domain-association';
-  
-    // Append the link element to the document body
-    document.body.appendChild(link);
-  
-    // Click the link to download the file
-    link.click();
-  
-    // Remove the link element from the document body
-    document.body.removeChild(link);
-  
-    return null;
-  };
-
   // N.B. routes prop within React Router needs to stay the same,
   // so that React is is not rerendering page component.
   // That's why we pass-in props.routes instead of calling routeConfiguration here.
   return (
     <Switch>
-       <Route name='AccessibilityPage' path="/.well-known/apple-developer-merchantid-domain-association" component={AppleDeveloperMerchantidDomainAssociation} />
+       <Route exact path="/well-known/apple-developer-merchantid-domain-association">
+        <AppleDeveloperMerchantidDomainAssociation />
+      </Route>
       {routes.map(toRouteComponent)}
       <Route component={NotFoundPage} />
     </Switch>
