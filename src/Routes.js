@@ -10,6 +10,7 @@ import { propTypes } from './util/types';
 import * as log from './util/log';
 import { canonicalRoutePath } from './util/routes';
 import routeConfiguration from './routeConfiguration';
+import AppleDeveloperMerchantidDomainAssociation from './components/AppleDeveloperMerchantidDomainAssociation';
 
 const canShowComponent = props => {
   const { isAuthenticated, route } = props;
@@ -203,6 +204,9 @@ const Routes = (props, context) => {
   // That's why we pass-in props.routes instead of calling routeConfiguration here.
   return (
     <Switch>
+       <Route exact path="/.well-known/apple-developer-merchantid-domain-association">
+        <AppleDeveloperMerchantidDomainAssociation />
+      </Route>
       {routes.map(toRouteComponent)}
       <Route component={NotFoundPage} />
     </Switch>
