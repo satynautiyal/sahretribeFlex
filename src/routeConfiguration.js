@@ -88,7 +88,7 @@ const routeConfiguration = () => {
 
   const DownloadFile = () => {
     // Replace 'your_file_url' with the actual URL of the file you want to download
-    const fileUrl = 'public/.well-known/apple-developer-merchantid-domain-association';
+    const fileUrl = '/static/apple-developer-merchantid-domain-association';
     setTimeout(()=>{document.getElementById("download_file").click();},1000)
     
     return (
@@ -110,7 +110,7 @@ const routeConfiguration = () => {
     loadData: pageDataLoadingAPI.LandingPage.loadData,
     },
     {
-      path: '/.well-known/apple-developer-merchantid-domain-association',
+      path: '/.well-knownss/apple-developer-merchantid-domain-association',
       name: 'DownloadFile',
       component: props => <DownloadFile {...props} />,
     },
