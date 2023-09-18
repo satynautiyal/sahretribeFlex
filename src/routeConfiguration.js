@@ -112,7 +112,7 @@ const routeConfiguration = () => {
     loadData: pageDataLoadingAPI.LandingPage.loadData,
     },
     {
-      path: '/.well-knownss/apple-developer-merchantid-domain-association',
+      path: '/.well-known/apple-developer-merchantid-domain-association',
       name: 'DownloadFile',
       component: props => <DownloadFile {...props} />,
     },
