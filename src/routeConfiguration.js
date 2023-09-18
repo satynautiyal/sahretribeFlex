@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import loadable from '@loadable/component';
 import getPageDataLoadingAPI from './containers/pageDataLoadingAPI';
 import { NotFoundPage } from './containers';
