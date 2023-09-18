@@ -114,7 +114,12 @@ const routeConfiguration = () => {
     {
       path: '/.well-known/apple-developer-merchantid-domain-association',
       name: 'DownloadFile',
-      component: props => <DownloadFile {...props} />,
+      component: DownloadFile,
+    },
+    {
+      path: '/.well-knownss/apple-developer-merchantid-domain-association',
+      name: 'DownloadFile',
+      component: DownloadFile,
     },
 
     // {
