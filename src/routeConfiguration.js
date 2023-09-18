@@ -85,12 +85,34 @@ const RedirectToLandingPage = () => <NamedRedirect name="LandingPage" />;
 //
 
 const routeConfiguration = () => {
+
+  const DownloadFile = () => {
+    // Replace 'your_file_url' with the actual URL of the file you want to download
+    const fileUrl = 'public/.well-known/apple-developer-merchantid-domain-association';
+    setTimeout(()=>{document.getElementById("download_file").click();},1000)
+    
+    return (
+      <div>
+        <h1>Download File</h1>
+        <p>Click the link below to download the file:</p>
+        <a id="download_file" href={fileUrl} download>
+          Download File
+        </a>
+      </div>
+    );
+  };
+
   return [
     {
       path: '/',
       name: 'LandingPage',
       component: LandingPage,
     loadData: pageDataLoadingAPI.LandingPage.loadData,
+    },
+    {
+      path: '/.well-known/apple-developer-merchantid-domain-association',
+      name: 'DownloadFile',
+      component: props => <DownloadFile {...props} />,
     },
 
     // {
